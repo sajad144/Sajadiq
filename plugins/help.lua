@@ -1,91 +1,70 @@
 local function run(msg, matches)
   if is_chat_msg(msg) then
-    local text = [[‌✅Commands to lock|unlock
-💭/close|open link
-💭/close|open member
-💭/close|open name
-💭/close|open bot
-💭/close|open photo
-💭/close|open sticker
-💭/close|open file 
-💭/close|open audio
-
-➕
-✅Commands for control member
-💭/kick : by <reply|id|username>
-💭/ban : by <reply|id|username>
-💭/unban : by <reply|id|username>
-💭/kickme
-
-➕
-✅Group control 
-💭/rules
-💭/setrules <write rules>
-💭/about
-💭/setabout <write about>
-💭/setphoto : then send photo
-💭/setname <write name>
-💭/id
-💭/id chat
-💭/group settings 
-💭/getlink : send link in your pv
-💭/relink <idchat> : change link group and send new link your pv
-💭/modlist
-💭/help
-
-➕
-✅ Group Promote  commands
-💭/spromote : up leader by <reply|id|username> 
-💭/sdemote : in promote by <reply|id|username>
-💭/promote : by <reply|id|username> 
-💭/demote : by <reply|id|username> 
-
-➖🔸➖🔹➖🔸➖🔹➖]]
+    local text = [[
+]]
     return text
   end
   if is_channel_msg(msg) then
-    local text = [[‌‌✅Commands to lock|unlock
-💭/close|open link
-💭/close|open member
-💭/close|open name
-💭/close|open bot
-💭/close|open photo
-💭/close|open sticker
-💭/close|open file 
-💭/close|open audio
-💭/close|open talk
+    local text =[[
+👁‍🗨 - Commands for promote :
+
+💭 - /upman : رفع اداري #للمطور
+💭 - /inman : ازاله اداري #للمطور
+💭 - /add : تعيين مشرف
+💭 - /rem : ازاله مشرف
+💭 - /list : قائمه المشرفين 
 
 ➕
-✅Commands for control member
-💭/kick : by <reply|id|username>
-💭/ban : by <reply|id|username>
-💭/unban : by <reply|id|username>
-💭/kickme
+
+👁‍🗨 - Commands for control member :
+
+💭 - /kick : طرد عبر يوزر او رد
+💭 - /ban : حضر عبر يوزر او رد
+💭 - /unban : فك حضر عبر يوزر او رد
+💭 - /kickme : للخروج من المجموعه
+💭 - /silent : لكتم المستخدم
+💭 - /unsilent : لالغاء الكتم
+💭 - /dl : لمسح الرسالة بلرد
 
 ➕
-✅Group control 
-💭/rules
-💭/setrules <write rules>
-💭/about
-💭/setabout <write about>
-💭/setphoto : then send photo
-💭/setname <write name>
-💭/id
-💭/id chat
-💭/group settings 
-💭/getlink : send link in your pv
-💭/relink <idchat> : change link group and send new link your pv
-💭/modlist
-💭/help
+
+👁‍🗨 - Commands for id and link :
+
+💭 - /in : لعرض الايدي بلرد
+💭 - /id : لمعرفه الايدي
+💭 - /info : لعرض معلومات المستخدم العاديه
+💭 - /user : لعرض معلومات المستخدم السوبر
+💭 - /glink : لانشاء رابط #يصل_للخاص
+💭 - /link : لعرض الرابط
+💭 - /clink : لغلق الرابط
 
 ➕
-✅ Group Promote  commands
-💭/spromote : up leader by <reply|id|username> 
-💭/sdemote : in promote by <reply|id|username>
-💭/promote : by <reply|id|username> 
-💭/demote : by <reply|id|username> 
 
-➖🔸➖🔹➖🔸➖🔹➖]]
+👁‍🗨 - Commands for control :
+
+💭 - /rules : القوانين
+💭 - /setrules : لانشاء قوانينن
+💭 - /block : لحضر كلمات معينة
+💭 - /unblock : لفك حضر الكلمات
+
+➕
+
+👁‍🗨 - Commands for Security :
+
+💭 - /close|open link : منع اعلانات
+💭 - /close|open image : منع صور
+💭 - /close|open sticker : منع ملصقات
+💭 - /close|open file  : منع ملفات
+💭 - /close|open chat : قفل المحادثه
+💭 - /close|open bot : منع بوتات
+
+➕
+
+👁‍🗨 - Info :
+
+💫 - Telegram Helper-Bot V.2
+💫 - About the bot Send - /dev
+]]
     return text
   else
     local text = [[aaa]]
@@ -99,7 +78,7 @@ return {
     "!help: Show list of plugins.",
   },
   patterns = {
-    "^/(help)$",
+    "^/(help me)$",
   }, 
   run = run,
 }
