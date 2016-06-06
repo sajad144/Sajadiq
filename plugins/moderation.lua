@@ -161,12 +161,12 @@ end
 
 local function upmanager(receiver, username, user_id)
   channel_set_admin(receiver, 'user#id'..user_id, callback, false)
-  return send_large_msg(receiver, 'Done!')
+  return send_large_msg(receiver, 'It was promoted to manage')
 end
 
 local function inmanager(receiver, username, user_id)
   channel_set_unadmin(receiver, 'user#id'..user_id, callback, false)
-  return send_large_msg(receiver, 'Done!')
+  return send_large_msg(receiver, 'It was demoted to manage')
 end
 
 local function admin_promote(receiver, username, user_id)  
@@ -212,26 +212,26 @@ local function username_id(cb_extra, success, result)
       if vusername == member then
         username = member
         user_id = v.peer_id
-        if get_cmd == 'promote' then
+        if get_cmd == 'add' then
             return promote(receiver, username, user_id)
-        elseif get_cmd == 'demote' then
+        elseif get_cmd == 'rem' then
           if is_spromoted(string.gsub(receiver,'.+#id', ''), user_id) then
             return send_large_msg(receiver, 'Can\'t demote leader')
           end
           return demote(receiver, username, user_id)
-        elseif get_cmd == 'adminprom' then
+        elseif get_cmd == 'pro' then
           if user_id == our_id then
             return
           end
           return admin_promote(receiver, username, user_id)
-        elseif get_cmd == 'admindem' then
+        elseif get_cmd == 'dem' then
           if user_id == our_id then
             return
           end
           return admin_demote(receiver, username, user_id)
-        elseif get_cmd == 'spromote' then
+        elseif get_cmd == 'spro' then
           return spromote(receiver, user_id, username)
-        elseif get_cmd == 'sdemote' then
+        elseif get_cmd == 'sdem' then
           return sdemote(receiver, user_id, username)
         end
       end
@@ -249,30 +249,30 @@ local function channel_username_id(cb_extra, success, result)
       if vusername == member then
         username = member
         user_id = v.peer_id
-        if get_cmd == 'promote' then
+        if get_cmd == 'add' then
           return promote(receiver, username, user_id)
-        elseif get_cmd == 'demote' then
+        elseif get_cmd == 'rem' then
           if is_spromoted(string.gsub(receiver,'.+#id', ''), user_id) then
             return send_large_msg(receiver, 'Can\'t demote leader')
           end
           return demote(receiver, username, user_id)
-        elseif get_cmd == 'adminprom' then
+        elseif get_cmd == 'pro' then
           if user_id == our_id then
             return
           end
           return admin_promote(receiver, username, user_id)
-        elseif get_cmd == 'admindem' then
+        elseif get_cmd == 'dem' then
           if user_id == our_id then
             return
           end
           return admin_demote(receiver, username, user_id)
-        elseif get_cmd == 'spromote' then
+        elseif get_cmd == 'spro' then
           return spromote(receiver, user_id, username)
-        elseif get_cmd == 'sdemote' then
+        elseif get_cmd == 'sdem' then
           return sdemote(receiver, user_id, username)
-        elseif get_cmd == 'upmanager' then
+        elseif get_cmd == 'upman' then
           return upmanager(receiver, username, user_id)
-        elseif get_cmd == 'inmanager' then
+        elseif get_cmd == 'inman' then
           return inmanager(receiver, username, user_id)
         end
       end
@@ -291,25 +291,25 @@ local function get_msg_callback(extra, success, result)
   else
     username = string.gsub(result.from.print_name, '_', ' ')
   end
-  if get_cmd == 'spromote' then
+  if get_cmd == 'spro' then
     if user_id == our_id then
       return nil
     end
     return spromote(receiver, user_id, username)
   end
-  if get_cmd == 'sdemote' then
+  if get_cmd == 'sdem' then
     if user_id == our_id then
       return nil
     end
     return sdemote(receiver, user_id, username)
   end
-  if get_cmd == 'promote' then
+  if get_cmd == 'add' then
     if user_id == our_id then
       return nil
     end
     return promote(receiver, username, user_id)
   end
-  if get_cmd == 'demote' then
+  if get_cmd == 'rem' then
     if user_id == our_id then
       return nil
     end
@@ -318,10 +318,10 @@ local function get_msg_callback(extra, success, result)
     end
     return demote(receiver, username, user_id)
   end
-  if get_cmd == 'upmanager' then
+  if get_cmd == 'upman' then
     return upmanager(receiver, username, user_id)
   end
-  if get_cmd == 'inmanager' then
+  if get_cmd == 'inman' then
     return inmanager(receiver, username, user_id)
   end
 end
@@ -367,15 +367,15 @@ function run(msg, matches)
   if is_chat_msg(msg) then
     local get_cmd = matches[1]
     local receiver = get_receiver(msg)
-    if matches[1] == 'modadd' then
+    if matches[1] == 'aded' then
       return modadd(msg)
     end
     
-    if matches[1] == 'modrem' then
+    if matches[1] == 'remo' then
       return modrem(msg)
     end
     
-    if matches[1] == 'promote' then
+    if matches[1] == 'add' then
       if not is_momod(msg) then
         return
       end
@@ -390,7 +390,7 @@ function run(msg, matches)
       chat_info(receiver, username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'demote' then
+    if matches[1] == 'rem' then
       if not is_momod(msg) then
         return "Only moderator can demote"
       end
@@ -408,7 +408,7 @@ function run(msg, matches)
       chat_info(receiver, username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'spromote' then
+    if matches[1] == 'spro' then
       if not is_admin(msg) then
         return "Only admin can promote moderator leader"
       end
@@ -423,7 +423,7 @@ function run(msg, matches)
       chat_info(receiver, username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'sdemote' then
+    if matches[1] == 'sdem' then
       if not is_admin(msg) then
         return "Only moderator can demote moderator leader"
       end
@@ -441,11 +441,11 @@ function run(msg, matches)
       chat_info(receiver, username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'modlist' then
+    if matches[1] == 'list' then
       return modlist(msg)
     end
     
-    if matches[1] == 'adminprom' then
+    if matches[1] == 'pro' then
       if not is_admin(msg) then
         return "Only sudo can promote user as admin"
       end
@@ -453,7 +453,7 @@ function run(msg, matches)
       chat_info(receiver, username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'admindem' then
+    if matches[1] == 'dem' then
       if not is_admin(msg) then
         return "Only sudo can promote user as admin"
       end
@@ -483,15 +483,15 @@ function run(msg, matches)
   if is_channel_msg(msg) then -- supergrouuuuppppppppp
     local get_cmd = matches[1]
     local receiver = get_receiver(msg)
-    if matches[1] == 'modadd' then
+    if matches[1] == 'aded' then
       return modadd(msg)
     end
     
-    if matches[1] == 'modrem' then
+    if matches[1] == 'remo' then
       return modrem(msg)
     end
     
-    if matches[1] == 'promote' then
+    if matches[1] == 'add' then
       if not is_momod(msg) then
         return
       end
@@ -506,7 +506,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'demote' then
+    if matches[1] == 'rem' then
       if not is_momod(msg) then
         return "Only moderator can demote"
       end
@@ -524,7 +524,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'spromote' then
+    if matches[1] == 'spro' then
       if not is_admin(msg) then
         return "Only admin can promote moderator leader"
       end
@@ -539,7 +539,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'sdemote' then
+    if matches[1] == 'sdem' then
       if not is_admin(msg) then
         return "Only moderator can demote moderator leader"
       end
@@ -557,11 +557,11 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'modlist' then
+    if matches[1] == 'list' then
       return modlist(msg)
     end
     
-    if matches[1] == 'upmanager' then
+    if matches[1] == 'upman' then
       if not is_admin(msg) then
         if not is_spromoted(msg.to.id, msg.from.id) then
           return "You're not a leader"
@@ -581,7 +581,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'inmanager' then
+    if matches[1] == 'inman' then
       if not is_admin(msg) then
         if not is_spromoted(msg.to.id, msg.from.id) then
           return "You're not a leader"
@@ -601,7 +601,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'adminprom' then
+    if matches[1] == 'pro' then
       if not is_admin(msg) then
         return "Only sudo can promote user as admin"
       end
@@ -609,7 +609,7 @@ function run(msg, matches)
       channel_get_users(receiver, channel_username_id, {get_cmd= get_cmd, receiver=receiver, member=member})
     end
     
-    if matches[1] == 'admindem' then
+    if matches[1] == 'dem' then
       if not is_admin(msg) then
         return "Only sudo can promote user as admin"
       end
@@ -663,23 +663,23 @@ return {
           },
       },
   patterns = {
-    "^/(modadd)$",
-    "^/(modrem)$",
-    "^/(spromote) (.*)$",
-    "^/(spromote)$",
-    "^/(sdemote) (.*)$",
-    "^/(sdemote)$",
-    "^/(promote) (.*)$",
-    "^/(promote)$",
-    "^/(demote) (.*)$",
-    "^/(demote)$",
-    "^/(upmanager) (.*)$",
-    "^/(upmanager)",
-    "^/(inmanager) (.*)$",
-    "^/(inmanager)",
-    "^/(modlist)$",
-    "^/(adminprom) (.*)$", -- sudoers only
-    "^/(admindem) (.*)$", -- sudoers only
+    "^/(aded)$",
+    "^/(remo)$",
+    "^/(spro) (.*)$",
+    "^/(spro)$",
+    "^/(sdem) (.*)$",
+    "^/(sdem)$",
+    "^/(add) (.*)$",
+    "^/(add)$",
+    "^/(rem) (.*)$",
+    "^/(rem)$",
+    "^/(upman) (.*)$",
+    "^/(upman)",
+    "^/(inman) (.*)$",
+    "^/(inman)",
+    "^/(list)$",
+    "^/(pro) (.*)$", -- sudoers only
+    "^/(dem) (.*)$", -- sudoers only
     "^/(adminlist)$",
     "^!!tgservice (chat_add_user)$",
     "^!!tgservice (chat_created)$",

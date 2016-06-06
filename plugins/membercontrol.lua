@@ -696,7 +696,7 @@ return {
     "^/(unsban) (.*)$",
     "^/(sban)$",
     "^/(kick) (.*)$",
-    "^/(kick)$",
+    "^/(@kick)$",
     "^/(kickme)$",
     "^/(silent) (.*)$", --only for supergroup
     "^/(silent)$",
