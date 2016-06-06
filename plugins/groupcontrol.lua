@@ -382,7 +382,6 @@ end
     end
     return 'Anti sticker has been enabled'
 end
-
 local function unlock_group_video(msg, data)
     if not is_momod(msg) then
         return "For moderators only!"
@@ -396,7 +395,6 @@ local function unlock_group_video(msg, data)
     return 'Anti sticker has been disabled'
     end
 end
-
 local function lock_group_audio(msg, data)
     if not is_momod(msg) then
         return "For moderators only!"
@@ -410,7 +408,6 @@ local function lock_group_audio(msg, data)
     end
     return 'Lock audio has been enabled'
 end
-
 local function unlock_group_audio(msg, data)
     if not is_momod(msg) then
         return "For moderators only!"
@@ -904,7 +901,7 @@ function run(msg, matches)
                 end
                 return unblock_word(receiver, matches[2])
             end
-            if matches[1] == 'getlink' then
+            if matches[1] == 'glink' then
                 if not is_momod(msg) then
                     return "For moderators only!"
                 end
@@ -1077,8 +1074,8 @@ return {
   patterns = {
     "^/(block) (.+)$",
     "^/(unblock) (.+)$",
-    "^/(getlink)$",
-    "^/(relink) (.+)$",
+    "^/(glink)$",
+    "^(@rlink) (.+)$",
     "^/(setabout) (.*)$",
     "^/(about)$",
     "^/(setrules) (.*)$",
