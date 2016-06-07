@@ -28,7 +28,7 @@ git clone https://github.com/sajad144/Sajad.Aliraqe.git
 
 #step4 : Writ >
 
-cd superflux-bot
+cd Sajad.Aliraqe
 
 
 
