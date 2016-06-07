@@ -1,38 +1,39 @@
 ~~This is Simple README 
 
-~~ Source Superflux For Supergroups 
+~~ Source Sajad.Aliraqe For Supergroups 
 
-+~~ Adeted By : @SasO_0 On Telegram ,
++~~ Develper By : @SasO_0 On Telegram ,
 
 To install on C9 your next steps
 
 
 
-#Step1 : writ this > in Terminal 
+-1 : writ this > in Terminal 
 
 sudo apt-get update 
 
 
 
-#step2 : writ this > in Terminal 
+-2 : writ this > in Terminal 
 
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ 
 libjansson-dev libpython-dev expat libexpat1-dev
 
 
 
-#step3 : writ >
+-3 : writ >
 
 git clone https://github.com/sajad144/Sajad.Aliraqe.git
 
 
-#step4 : Writ >
+
+-4 : Writ >
 
 cd Sajad.Aliraqe
 
 
 
-step5 : Writ >
+-5 : Writ >
 
 ./launch.sh install 
 
@@ -42,7 +43,7 @@ step5 : Writ >
 
 
 
-step6 : Writ >
+-6 : Writ >
 
 ./launch.sh 
 
@@ -54,11 +55,11 @@ Then ask You Number To put him Bot
 
 ----------------------------
 
-For the inauguration #SourceSuperflux 
+For the inauguration #SourceSajad.Aliraqe 
 
 
 
-️#one_Commnd_in_New_terimnal 💠
+One_Commnd_in_New_terimnal 💠
 
 
 
