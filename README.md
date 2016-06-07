@@ -1,12 +1,10 @@
-~~This is Simple README 
+Source Sajad.Aliraqe For Supergroups 
 
-~~ Source Sajad.Aliraqe For Supergroups 
-
-+~~ Develper By : @SasO_0 On Telegram ,
+Develper By : @SasO_0 On Telegram ,
 
 To install on C9 your next steps
 
-
+--------------------------------------
 
 -1 : writ this > in Terminal 
 
