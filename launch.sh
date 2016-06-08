@@ -94,6 +94,7 @@ install() {
   install_rocks
 }
 
+
 if [ "$1" = "install" ]; then
   install
 elif [ "$1" = "update" ]; then
