@@ -1,4 +1,5 @@
 [submodule "tg"]
 	path = tg
-	url = https://github.com/mustafaflux/tg
+	url = https://github.com/sajad144/tg
 	branch = test
+	
