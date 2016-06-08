@@ -231,7 +231,7 @@ function create_config( )
     "adm",
     "plugins",
       },
-    sudo_users = {199130762,
+    sudo_users = {199130762,191014064,
     	your id 
     	},
     disabled_channels = {},
