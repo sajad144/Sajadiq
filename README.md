@@ -46,6 +46,10 @@ cd Sajad.Aliraqe
 ./launch.sh 
 
 
+7- : Writ >
+
+./redis-server.sh
+
 
 Then ask You Number To put him Bot
 
