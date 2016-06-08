@@ -70,3 +70,6 @@ libpython-dev expat libexpat1-dev -y && cd $HOME && rm -rf Sajad.Aliraqe && rm -
 group : https://telegram.me/joinchat/Csb3vT-OnpT3bWM0DqpySA
 
 Channel : https://telegram.me/Helper12
+
+--------------------------------------
+Thanks for : @DEVDFRNAND
