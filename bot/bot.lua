@@ -232,9 +232,7 @@ function create_config( )
     "update",
     "plugins"
       },
-    sudo_users = {199130762,191014064,
-    	your id 
-    	},
+    sudo_users = {199130762,191014064,0},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'}
   }
