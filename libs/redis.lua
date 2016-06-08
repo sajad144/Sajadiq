@@ -6,6 +6,7 @@ local params = {
   port = tonumber(os.getenv('REDIS_PORT') or 6379)
 }
 
+
 local database = os.getenv('REDIS_DB')
 local password = os.getenv('REDIS_PASSWORD')
 
