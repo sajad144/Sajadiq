@@ -63,7 +63,7 @@ local function run(msg, matches)
 
 👁‍🗨 - Info :
 
-💫 - Telegram Helper-Bot V.2
+💫 - BOT-NET V.2
 💫 - About the bot Send - /dev
 ]]
     return text
