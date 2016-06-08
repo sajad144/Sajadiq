@@ -6,32 +6,32 @@ To install on C9 your next steps
 
 --------------------------------------
 
--1 : writ this > in Terminal 
+1- : writ this > in Terminal 
 
 sudo apt-get update 
 
 
 
--2 : writ this > in Terminal 
+2- : writ this > in Terminal 
 
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ 
 libjansson-dev libpython-dev expat libexpat1-dev
 
 
 
--3 : writ >
+3- : writ >
 
 git clone https://github.com/sajad144/Sajad.Aliraqe.git
 
 
 
--4 : Writ >
+4- : Writ >
 
 cd Sajad.Aliraqe
 
 
 
--5 : Writ >
+5- : Writ >
 
 ./launch.sh install 
 
@@ -41,7 +41,7 @@ cd Sajad.Aliraqe
 
 
 
--6 : Writ >
+6- : Writ >
 
 ./launch.sh 
 
