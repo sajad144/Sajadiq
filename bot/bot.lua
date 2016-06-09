@@ -220,6 +220,7 @@ function create_config( )
     "link",
     "bot",
     "anti_help",
+    "id",
     "id_rebly",
     "delrebly",
     "forward",
