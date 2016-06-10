@@ -9,7 +9,6 @@ local function run(msg, matches)
 💭 - Commands for only sudo 🗣 :
 
 🌟 - /update : تحديث لتجنب الايقاف
-🌟 - /tosuper : تحويل المجموعه الى سوبر
 🌟 - /pro : رفع مطور
 🌟 - /dem : أزاله مطور
 🌟 - /aded : أضافه البوت
