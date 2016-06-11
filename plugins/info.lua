@@ -1,21 +1,19 @@
+--Coded By Sajad Aliraqe >> @Xread
 do
 function run(msg, matches)
 local reply_id = msg['id']
-
-local info = ' - Name : '..msg.from.first_name..'\n'
-..' - User ID : '..msg.from.id..'\n'
-..' - Username : @'..msg.from.username..'\n'
-..' - Group ID : '..msg.to.id..'\n'
-..' - Receives : 5 K.\n - Group Name : '..msg.to.title
-
-reply_msg(reply_id, info, ok_cb, false)
+local text = 'info'
+local text1 =" - Group ID : "..msg.to.id.."\n - Group name : "..msg.to.title.."\n - Your name : "..(msg.from.first_name or '').."\n - First : "..(msg.from.first_name or '').."\n - Last : "..(msg.from.last_name or '').."\n - User ID : "..msg.from.id.."\n - Username : @"..(msg.from.username or '').."\n - Phone number : +"..(msg.from.phone or '').."\n - Receives : 5 K."
+  reply_msg(reply_id, text1, ok_cb, false)
 end
-
 return {
-patterns = {
-"^[!/#]info"
-},
-run = run
+  description = "", 
+  usage = "",
+  patterns = {
+    "^[!/#]info$",
+  },
+  run = run
 }
---Coded By Sajad Aliraqe >> @Xread
 end
+
+--Coded By Sajad Aliraqe >> @SasO_0
