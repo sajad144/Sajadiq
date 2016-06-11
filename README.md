@@ -70,10 +70,10 @@ libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make 
 libpython-dev expat libexpat1-dev -y && cd $HOME && rm -rf Sajad.Aliraqe && rm -rf .telegram-cli && git clone https://github.com/sajad144/Sajad.Aliraqe.git && cd Sajad.Aliraqet && ./launch.sh install && ./launch.sh
 ~~~~~
 
-
+-------------------------------------
 group : https://telegram.me/joinchat/Csb3vT-OnpT3bWM0DqpySA
 
 Channel : https://telegram.me/Helper12
 
 --------------------------------------
-Thanks for : @DEVDFRNAND
+
