@@ -1,5 +1,5 @@
 do
---create by RoyalTeam ID CHANNEL : @RoyalTeamCh
+--Create and Coded by Sajad Aliraqe - @SasO_0
   local function action_by_reply(extra, success, result)
     if result.from.username then
       user_name = '@'..result.from.username
@@ -19,7 +19,7 @@ do
 
     end
   end
---create by Sajad Aliraqe - @Xread
+--Create and Coded by Sajad Aliraqe - @SasO_0
   return {
     decription = 'test kick by_reply',
     usage = 'reply then type kick',
