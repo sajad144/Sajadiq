@@ -640,7 +640,7 @@ return {
   description = "Moderation plugin", 
   usage = {
       user = {
-          "/modlist : List of moderators",
+          "",
           },
       moderator = {
           "/promote <username> : Promote user as moderator by username",
