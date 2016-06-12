@@ -82,7 +82,7 @@ end
 return {
   description = "Plugin to create a new group",
   usage = {
-  	"!cgpsuper <group_name> : Create a new moderation group",
+  	"/mkg <group_name> : Create a new moderation group",
   },
   patterns = {
     "^/(mkg) (.*)$",
