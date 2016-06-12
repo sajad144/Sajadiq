@@ -9,7 +9,7 @@ function run(msg, matches)
 end
 
 return {
-    description = "", 
+    description = "delete messages by rebly by Sajad", 
     usage = "",
     patterns = {
       "^/dl$"
