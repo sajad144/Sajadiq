@@ -1,4 +1,4 @@
-function run(msg, matches)
+function sajad(msg, matches)
 if not is_sudo(msg) then
 return 
 end
@@ -9,6 +9,6 @@ return {
   patterns = {
     '^[#/!]update$'
   },
-  run = run,
+  run = sajad,
   moderated = true
 }
