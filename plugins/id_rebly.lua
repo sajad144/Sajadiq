@@ -22,7 +22,7 @@ do
 --------------------------------------------------------------------------------
 
   return {
-    decription = 'Print user_id by_reply',
+    decription = 'Print user_id by_reply By Sajad Aliraqe',
     usage = 'Reply to a message then type: !id',
     patterns = {
       "^/(in)$"
