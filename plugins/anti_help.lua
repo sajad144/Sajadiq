@@ -5,8 +5,8 @@ end
 end
 
 return {
-	description = "Chat With Robot Server", 
-	usage = "chat with robot",
+	description = "anti help by sajad", 
+	usage = "anti help",
 	patterns = {
     "^/help$",
 
