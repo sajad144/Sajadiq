@@ -22,7 +22,7 @@ local function run(msg, matches)
                     local hash = 'mate:'..msg.to.id
                     redis:set(hash, true)
                     return "It has been closed Forward Messages"
-  elseif is_admin(msg) and matches[1] == 'unforward' then
+  elseif is_momod(msg) and matches[1] == 'unforward' then
       local hash = 'mate:'..msg.to.id
       redis:del(hash)
       return "It has been opened Forward Messages"
