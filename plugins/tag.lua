@@ -61,7 +61,7 @@ end
 
 
 return {
-  description = "Will tag all ppl with a msg.",
+  description = "Will tag all ppl with a msg By Sajad",
   usage = {
     "/tagall [msg]."
   },
