@@ -666,7 +666,7 @@ local function run(msg, matches)
 end
 
 return {
-  description = "Plugin to manage bans, kicks and white/black lists.", 
+  description = "", 
   usage = {
       user = "!kickme : Exit from group",
       moderator = {
