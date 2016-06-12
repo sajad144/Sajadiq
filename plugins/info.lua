@@ -1,4 +1,4 @@
---Coded By Sajad Aliraqe >> @Xread
+--Coded By Sajad Aliraqe >> @SasO_0
 do
 function run(msg, matches)
 local reply_id = msg['id']
