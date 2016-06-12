@@ -12,7 +12,7 @@ local function run(msg, matches)
   if matches[1] == 'rmsg' and is_sudo(msg) then
     if msg.to.type == 'channel' then
       if tonumber(matches[2]) > 10000 or tonumber(matches[2]) < 1 then
-        return "Only Remove +5 Massage"
+        return "Only Remove +5 Massages"
       end
       get_history(msg.to.peer_id, matches[2] + 1 , history , {chatid = msg.to.peer_id, con = matches[2]})
     else
