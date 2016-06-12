@@ -24,7 +24,7 @@ local function run(msg, matches)
 end
 
 return {
-  description = "Help plugin. Get info from other plugins.  ", 
+  description = "", 
   usage = {
     "!help: Show list of plugins.",
   },
