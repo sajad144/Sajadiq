@@ -227,13 +227,14 @@ function create_config( )
     "kicked",
     "mk_gb",
     "help1",
+    "infoserver",
     "rmsg",
     "bot",
     "tag",
     "update",
     "plugins"
       },
-    sudo_users = {199130762,191014064,0},
+    sudo_users = {199130762,0},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'}
   }
