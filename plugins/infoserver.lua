@@ -1,3 +1,5 @@
+-- Coded By Sajad Aliraqe : @SasO_0
+
 do
     
 function run(msg, matches)
@@ -17,3 +19,4 @@ return {
   run = run
 }
 end
+-- Coded By Sajad Aliraqe : @SasO_0
