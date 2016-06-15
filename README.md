@@ -21,13 +21,13 @@ libjansson-dev libpython-dev expat libexpat1-dev
 
 3- : writ >
 
-git clone https://github.com/sajad144/Sajad.Aliraqe.git
+git clone https://github.com/sajad144/Sajadiq.git
 
 
 
 4- : Writ >
 
-cd Sajad.Aliraqe
+cd Sajadiq
 
 
 
@@ -61,17 +61,17 @@ For the inauguration #SourceSajad.Aliraqe
 
 
 
-One_Commnd_in_New_terimnal 💠
+One_Commnd_In_New_Terimnal 
 
 
 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get install 
 libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev 
-libpython-dev expat libexpat1-dev -y && cd $HOME && rm -rf Sajad.Aliraqe && rm -rf .telegram-cli && git clone https://github.com/sajad144/Sajad.Aliraqe.git && cd Sajad.Aliraqet && ./launch.sh install && ./launch.sh
+libpython-dev expat libexpat1-dev -y && cd $HOME && rm -rf Sajadiq && rm -rf .telegram-cli && git clone https://github.com/sajad144/Sajadiq.git && cd Sajadiq && ./launch.sh install && ./launch.sh
 ~~~~~
 
 -------------------------------------
-group : https://telegram.me/joinchat/Csb3vT-OnpT3bWM0DqpySA
+group : https://telegram.me/joinchat/Csb3vT-OnpRoZ3YzceYN2Q
 
 Channel : https://telegram.me/Helper12
 
