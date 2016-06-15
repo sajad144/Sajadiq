@@ -117,6 +117,10 @@ else
     echo "remove it!"
     rm -rf $HOME/.telegram-cli/state
   fi
-
+echo -e "\033[38;5;208m"
+   echo -e "       C O D E D  B Y :  S A J A D AL I R A Q E           "
+   echo -e "                      \033[0;00m"
+   echo -e "                T E L E : @SasO_0                           "
+   echo -e "\e[36m"
   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/bot.lua -l 1 -E $@ --disable-link-preview
 fi
