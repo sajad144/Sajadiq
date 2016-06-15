@@ -114,8 +114,6 @@ else
 
   if [ -f $HOME/.telegram-cli/state ]; then
     echo "state found"
-    echo "remove it!"
-    rm -rf $HOME/.telegram-cli/state
   fi
 echo -e "\033[38;5;208m"
    echo -e "       C O D E D  B Y :  S A J A D AL I R A Q E           "
