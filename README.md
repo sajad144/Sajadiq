@@ -19,7 +19,7 @@ libjansson-dev libpython-dev expat libexpat1-dev
 
 
 
-3- : writ >
+3- : writ In a New Terimnal >
 
 git clone https://github.com/sajad144/Sajadiq.git
 
