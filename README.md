@@ -19,7 +19,7 @@ libjansson-dev libpython-dev expat libexpat1-dev
 
 
 
-3- : writ In a New Terimnal >
+3- : writ >
 
 git clone https://github.com/sajad144/Sajadiq.git
 
@@ -46,7 +46,7 @@ cd Sajadiq
 ./launch.sh 
 
 
-7- : Writ >
+7- : Writ thes command in a new terminal >
 
 ./redis-server.sh
 
